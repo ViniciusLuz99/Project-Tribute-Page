@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+/*
+    Mobile First padrão
+*/
+/*Root*/
+:root {
+  /* Cores */
+  --primary-color: #e91e63;
+  --secondary-color: #ff2014;
+  --tertiary-color: #ff14d8;
+  --quaternary-color: #f53f14;
+  --Neon-primary: #cf1a56b6;
+
+  --white-1: #f8f8f8; /*off-white claro */
+  --white-2: #f2f2f2; /*off-white claro */
+  --white-3: #e5e5e5; /*off-white médio */
+  --white-4: #d8d8d8; /*off-white escuro */
+  --black-0: #141414;
+  --black-1: #282828; /*off-black muito escuro */
+  --black-2: #333333; /*off-black muito escuro */
+  --black-3: #4a4a4a; /*off-black escuro */
+  --black-4: #5e5e5e; /*off-black médio */
+  --black-5: #777777; /*off-black claro */
+
+  /* Fontes */
+  --fonte-titulo: "Open Sans", sans-serif;
+  --fonte-corpo: "Open Sans", sans-serif;
+  --fonte-mono: "Fira Code", monospace;
+
+  /*sombras*/
+  --shadow-box-hover: 0px 0px 11px rgba(0, 0, 0, 0.432);
+  --shadow-P: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-M: 0 2px 4px rgba(0, 0, 0, 0.12);
+  --shadow-G: 0 4px 8px rgba(0, 0, 0, 0.16);
+  --shadow-GG: 0 4px 10px rgba(0, 0, 0, 0.24);
+  --shadow-TESTE: 0 8px 6px rgba(241, 16, 16, 0.877);
+  --text-shadow-P: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  --text-shadow-M: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  --text-shadow-G: 2px 3px 6px rgba(0, 0, 0, 0.3);
+  --text-shadow-GG: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+/* Reset CSS básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+/*
+Estilos gerais
+-------------
+*/
+body {
+  font-family: var(--fonte-corpo);
+  font-size: 16px;
+  color: var(--white-2);
+  background-color: var(--black-0);
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  text-shadow: var(--text-shadow-P);
+}
+
+/*Layout*/
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+/*
+Estilos da pagina
+*/
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  width: 98%;
+  background-color: var(--black-1);
+  border-radius: 10px 10px 0 0;
+}
+
+#title {
+  padding: 30px;
+  text-align: center;
+  font-size: 1.9rem;
+  text-shadow: 0px 0px 4px var(--Neon-primary);
+}
+#title h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--black-5);
+  text-shadow: 0px 0px 10px var(--Neon-primary);
+}
+
+#img-div {
+  text-align: center;
+  width: 98%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  background-color: var(--black-0);
+  box-shadow: 0px 0px 10px var(--Neon-primary);
+}
+
+img {
+  display: block;
+  border-radius: 5px;
+}
+
+#image {
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+figcaption {
+  margin-top: 10px;
+}
+
+#tribute-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 800px;
+}
+
+#tribute-info h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 10px;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+#tribute-info p {
+  max-width: 100%;
+  width: 800px;
+  text-align: left;
+  font-size: 1.1rem;
+  margin: 10px;
+  padding: 10px 50px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  box-shadow: 0px 0px 10px var(--Neon-primary);
+}
+
+#tribute-info ul {
+  max-width: 600px;
+  margin: 10px auto;
+}
+#tribute-info ul li {
+  font-size: 1rem;
+  font-weight: light;
+  margin: 1rem;
+  list-style: none;
+}
+li::before {
+  content: "\2022"; /* código do ícone de lista */
+  color: var(--primary-color); /* cor do ícone de lista */
+  margin-right: 0.2em;
+  text-shadow: 0px 0px 5px var(--primary-color);
+}
+#div-link {
+  margin: 10px;
+  padding: 10px;
+}
+
+#div-link a {
+  color: var(--white-1);
+}
+
+#div-link a:hover {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+#div-link a span {
+  color: var(--primary-color);
+  text-shadow: 0px 0px 5px var(--Neon-primary);
+}
